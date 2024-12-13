@@ -126,6 +126,13 @@ nav ul li a:hover {
 
 #animation-container {
     margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#burger, #balloons {
+    margin: 0 10px; /* Optional: Add some spacing between the divs */
 }
 
 /* Game Styles */
