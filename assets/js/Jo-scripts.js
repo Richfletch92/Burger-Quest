@@ -145,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             wrongGuesses.push(letter);
             attempts--;
+            pop.play();
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
             updateCatImage(attempts); // Update cat image
@@ -169,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
         catImage.alt = `A cat holding balloons. You have ${attempts} guesses left.`;
     }
 
-    
+    var pop = new Audio('assets/balloon-pop-48030.mp3');
+
 
 });
