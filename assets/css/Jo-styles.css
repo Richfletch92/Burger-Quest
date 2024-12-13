@@ -87,6 +87,28 @@ nav ul li a:hover {
     }
 }
 
+.fall {
+    position: relative;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform:rotate(80deg);
+        top: 50px;
+    }
+    50% {
+        transform:rotate(90deg);
+        top: 100px;
+    }
+    100% {
+        transform:rotate(100deg);
+        top: 5000px;
+    }
+}
+
 #balloons img {
     height: 500px;
 }

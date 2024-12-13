@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             wrongGuesses.push(letter);
             attempts--;
+            balloons--;
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
             displayWord();
@@ -160,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    let balloons = 10;
+    var balloons = 0;
     // adds cat and balloons picture
     const cat = document.getElementById('cat');
     cat.src = `assets/images/balloonsGraphic${balloons}.png`;
