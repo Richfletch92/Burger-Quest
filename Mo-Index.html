@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Mo-styles.css">
 </head>
 <body>
     <nav>
@@ -16,26 +16,33 @@
             <li><a href="Sardar-Index.html">Sardar's Page</a></li>
         </ul>
     </nav>
-    <div id="balloons" class="float">
-        <img id="cat" src="assets/images/balloonsGraphic10.png" alt="A cat holding balloons. You have ten guesses left.">
-    </div>
-    <main class="game-container">
-        <h1>Hangman Game</h1>
-        <!-- Difficulty Selection Buttons -->
-        <div id="difficulty-buttons">
-            <button class="difficulty-button" data-level="easy">Easy</button>
-            <button class="difficulty-button" data-level="intermediate">Intermediate</button>
-            <button class="difficulty-button" data-level="genius">Genius</button>
-        </div>
-        <!-- Game Display -->
-        <div class="word-display" id="word-display"></div>
-        <div class="attempts">Attempts: <span id="attempts">9</span></div>
-        <div class="wrong-guesses" id="wrong-guesses"></div>
-        <div class="keyboard" id="keyboard"></div>
-        <div class="hidden" id="text-entry"><input maxlength="1" id="text-entry-guess" type="text"><button id="submit-button">Submit</button></div>
-        <!-- Start Game Button -->
-        <button id="reset-button" class="reset-button hidden">Reset Game</button>
+    <main id="main-container">
+        <section id="animation-container">
+            <div id="burger" class="float">
+                <img src="assets/images/burgerGraphic1.png" alt="A burger hangs from a balloon. Help the cat reach it!">
+            </div>
+            <div id="balloons" class="float raised">
+                <img id="cat" src="assets/images/balloonsGraphic10.png" alt="A cat holding balloons. You have ten guesses left.">
+            </div>
+        </section>
+        <section class="game-container">
+            <h1>Burger Quest</h1>
+            <!-- Difficulty Selection Buttons -->
+            <div id="difficulty-buttons">
+                <button class="difficulty-button" data-level="easy">Easy</button>
+                <button class="difficulty-button" data-level="intermediate">Intermediate</button>
+                <button class="difficulty-button" data-level="genius">Genius</button>
+            </div>
+            <!-- Game Display -->
+            <div class="word-display" id="word-display"></div>
+            <div class="attempts">Attempts: <span id="attempts">9</span></div>
+            <div class="wrong-guesses" id="wrong-guesses"></div>
+            <div class="keyboard" id="keyboard"></div>
+            <div class="hidden" id="text-entry"><input maxlength="1" id="text-entry-guess" type="text"><button id="submit-button">Submit</button></div>
+            <!-- Start Game Button -->
+            <button id="reset-button" class="reset-button hidden">Reset Game</button>
+        </section>
     </main>
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/Mo-scripts.js"></script>
 </body>
 </html>

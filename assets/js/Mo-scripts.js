@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', () => {
             selectedLevel = button.dataset.level;
             setDifficulty(selectedLevel);
+            updateCatImage(attempts); // Update cat image
         });
     });
 
@@ -66,6 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
         resetButton.classList.remove('hidden');
         textEntry.classList.remove('hidden');
+        document.getElementById('balloons');
+        balloons.classList.remove("fall");
+        balloons.classList.add("float");
 
     }
 
@@ -126,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
             attempts--;
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
+            updateCatImage(attempts); // Update cat image
             displayWord();
         }
     }
@@ -145,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
             attempts--;
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
+            updateCatImage(attempts); // Update cat image
             displayWord();
         }
     }
@@ -157,7 +163,19 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Congratulations! You won!');
         } else if (attempts <= 0) {
             alert('Game Over! You ran out of attempts!');
+            document.getElementById('balloons');
+            balloons.classList.remove("float");
+            balloons.classList.add("fall");
         }
     }
+
+    function updateCatImage(attempts) {
+        const catImage = document.getElementById('cat');
+        catImage.src = `assets/images/balloonsGraphic${attempts}.png`;
+        catImage.alt = `A cat holding balloons. You have ${attempts} guesses left.`;
+    }
+
+    var pop = new Audio('assets/balloon-pop-48030.mp3');
+    pop.play();
 
 });

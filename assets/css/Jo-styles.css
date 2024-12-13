@@ -124,7 +124,7 @@ nav ul li a:hover {
     height: 500px;
 }
 
-#balloons {
+#animation-container {
     margin-left: 30px;
 }
 
@@ -243,7 +243,7 @@ nav ul li a:hover {
         align-items: flex-start;
     }
 
-    #balloons {
+    #animation-container {
         margin-left: 20px;
         order: 1;
     }

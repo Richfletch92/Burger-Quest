@@ -35,9 +35,9 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensure it stays above other content */
+    z-index: 1000;
+    /* Ensure it stays above other content */
 }
-
 
 nav ul {
     list-style-type: none;
@@ -61,7 +61,6 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #575757;
 }
-
 
 /* Animation Styles */
 .float {
@@ -93,11 +92,39 @@ nav ul li a:hover {
     }
 }
 
+.fall {
+    position: relative;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: rotate(80deg);
+        top: 50px;
+    }
+
+    50% {
+        transform: rotate(90deg);
+        top: 100px;
+    }
+
+    100% {
+        transform: rotate(100deg);
+        top: 5000px;
+    }
+}
+
+#burger {
+    float: left;
+}
+
 #cat {
     height: 500px;
 }
 
-#balloons {
+#animation-container {
     margin-left: 30px;
 }
 
@@ -216,7 +243,7 @@ nav ul li a:hover {
         align-items: flex-start;
     }
 
-    #balloons {
+    #animation-container {
         margin-left: 20px;
         order: 1;
     }
@@ -226,7 +253,7 @@ nav ul li a:hover {
         margin-top: -200px;
     }
 
-    .keyboard { 
+    .keyboard {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
