@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     //Declared Variables
     const resetButton = document.getElementById('reset-button');
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
         resetButton.classList.remove('hidden');
         textEntry.classList.remove('hidden');
         document.getElementById('balloons');
-            balloons.classList.remove("fall");
-            balloons.classList.add("float");
+        balloons.classList.remove("fall");
+        balloons.classList.add("float");
 
     }
 
@@ -134,12 +134,12 @@ document.addEventListener('DOMContentLoaded', function() {
             displayWord();
         }
     }
-    
+
     /**
      * Checks the letter entered in the text box against the word generated
      * and displays the word on the screen
      */
-    function handleGuessText () {
+    function handleGuessText() {
         letter = document.getElementById('text-entry-guess').value.toLowerCase();
         if (guessedLetters.includes(letter) || wrongGuesses.includes(letter)) return;
         guessedLetters.push(letter);
@@ -177,7 +177,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var pop = new Audio('assets/balloon-pop-48030.mp3');
     pop.play();
-
- 
-
+    
 });
