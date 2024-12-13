@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman Game</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Burger Quest!</title>
+    <link rel="stylesheet" href="assets/css/Jo-styles.css">
 </head>
 <body>
+<div id="wrapper">
+    <h1>Jo's page test</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -16,11 +18,14 @@
             <li><a href="Sardar-Index.html">Sardar's Page</a></li>
         </ul>
     </nav>
+    <div id="burger" class="float">
+        <img src="assets/images/burgerGraphic1.png" alt="A burger hangs from a balloon. Help the cat reach it!">
+    </div>
     <div id="balloons" class="float">
         <img id="cat" src="assets/images/balloonsGraphic10.png" alt="A cat holding balloons. You have ten guesses left.">
     </div>
     <main class="game-container">
-        <h1>Hangman Game</h1>
+        <h1>Burger Quest</h1>
         <!-- Difficulty Selection Buttons -->
         <div id="difficulty-buttons">
             <button class="difficulty-button" data-level="easy">Easy</button>
@@ -36,6 +41,7 @@
         <!-- Start Game Button -->
         <button id="reset-button" class="reset-button hidden">Reset Game</button>
     </main>
-    <script src="assets/js/scripts.js"></script>
+</div>
+    <script src="assets/js/Jo-scripts.js"></script>
 </body>
 </html>
