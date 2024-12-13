@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', () => {
             selectedLevel = button.dataset.level;
             setDifficulty(selectedLevel);
+            updateCatImage(attempts); // Update cat image
         });
     });
 
@@ -126,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             attempts--;
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
+            updateCatImage(attempts); // Update cat image
             displayWord();
         }
     }
@@ -145,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
             attempts--;
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
+            updateCatImage(attempts); // Update cat image
             displayWord();
         }
     }
@@ -158,6 +161,12 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (attempts <= 0) {
             alert('Game Over! You ran out of attempts!');
         }
+    }
+
+    function updateCatImage(attempts) {
+        const catImage = document.getElementById('cat');
+        catImage.src = `assets/images/balloonsGraphic${attempts}.png`;
+        catImage.alt = `A cat holding balloons. You have ${attempts} guesses left.`;
     }
 
 });
