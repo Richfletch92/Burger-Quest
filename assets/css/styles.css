@@ -1,1 +1,185 @@
+/* General Styles */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #3be2ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FF5722;
+}
+
+
+/* Animation Styles */
+.float {
+    position: relative;
+    animation-name: float;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float {
+    0% {
+        top: 10px;
+    }
+
+    25% {
+        top: 0px;
+    }
+
+    50% {
+        top: 20px;
+    }
+
+    75% {
+        top: 20px;
+    }
+
+    100% {
+        top: 10px;
+    }
+}
+
+#balloons img {
+    height: 500px;
+}
+
+/* Game Styles */
+.game-container {
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.word-display {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.wrong-guesses,
+.attempts {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#text-entry {
+    margin-bottom: 20px;
+}
+
+#text-entry input {
+    width: 40px;
+    font-size: 1.2rem;
+    height: 42px;
+    text-align: center;
+}
+
+#submit-button {
+    background-color: #03A9F4;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+#submit-button:hover {
+    background-color: #0288D1;
+}
+
+.letter-button {
+    background-color: #8BC34A;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40px;
+    width: 40px;
+}
+
+.letter-button:hover {
+    background-color: #66BB6A;
+}
+
+.reset-button {
+    background-color: #F44336;
+    color: white;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #D32F2F;
+}
+
+.difficulty-button {
+    background-color: #03A9F4;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.difficulty-button:hover {
+    background-color: #0288D1;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .main-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #balloons {
+        margin-left: 20px;
+    }
+
+    .keyboard {
+        display: grid;
+    }
+}
