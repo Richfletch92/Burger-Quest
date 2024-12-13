@@ -93,8 +93,12 @@ nav ul li a:hover {
     }
 }
 
-#balloons img {
+#cat {
     height: 500px;
+}
+
+#balloons {
+    margin-left: 30px;
 }
 
 /* Game Styles */
@@ -104,8 +108,9 @@ nav ul li a:hover {
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     padding: 20px;
+    margin-bottom: 50px;
 }
 
 .word-display {
@@ -216,7 +221,10 @@ nav ul li a:hover {
         order: 1;
     }
 
-    
+    /* Raise the cat image when the keyboard is not visible */
+    .raised {
+        margin-top: -200px;
+    }
 
     .keyboard { 
         display: flex;
@@ -230,5 +238,112 @@ nav ul li a:hover {
 
     #text-entry {
         display: none;
+    }
+
+}
+
+@media (max-height: 800px) {
+    #cat {
+        margin-top: 150px;
+    }
+
+    .game-container {
+        padding: 15px;
+    }
+
+    .word-display {
+        font-size: 1.8em;
+    }
+
+    .wrong-guesses,
+    .attempts {
+        font-size: 1em;
+    }
+
+    .letter-button {
+        font-size: 1em;
+        height: 35px;
+        width: 35px;
+    }
+
+    .reset-button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    .difficulty-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-height: 600px) {
+    #cat {
+        height: 400px;
+    }
+
+    .game-container {
+        padding: 10px;
+    }
+
+    .word-display {
+        font-size: 1.5em;
+    }
+
+    .wrong-guesses,
+    .attempts {
+        font-size: 0.9em;
+    }
+
+    .letter-button {
+        font-size: 0.9em;
+        height: 30px;
+        width: 30px;
+    }
+
+    .reset-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .difficulty-button {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-height: 400px) {
+    #cat {
+        height: 300px;
+        margin-top: 200px;
+    }
+
+    .game-container {
+        padding: 5px;
+    }
+
+    .word-display {
+        font-size: 1.2em;
+    }
+
+    .wrong-guesses,
+    .attempts {
+        font-size: 0.8em;
+    }
+
+    .letter-button {
+        font-size: 0.8em;
+        height: 25px;
+        width: 25px;
+    }
+
+    .reset-button {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+
+    .difficulty-button {
+        font-size: 0.8em;
+        padding: 5px 10px;
     }
 }

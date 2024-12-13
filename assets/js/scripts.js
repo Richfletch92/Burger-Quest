@@ -169,4 +169,6 @@ document.addEventListener('DOMContentLoaded', function() {
         catImage.alt = `A cat holding balloons. You have ${attempts} guesses left.`;
     }
 
+    
+
 });
