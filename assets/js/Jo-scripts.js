@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
         resetButton.classList.remove('hidden');
         textEntry.classList.remove('hidden');
         document.getElementById('balloons');
-            balloons.classList.remove("fall");
-            balloons.classList.add("float");
+        balloons.classList.remove("fall");
+        balloons.classList.add("float");
 
     }
 
@@ -177,7 +177,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var pop = new Audio('assets/balloon-pop-48030.mp3');
     pop.play();
-
- 
 
 });
