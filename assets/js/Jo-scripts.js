@@ -67,6 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
         resetButton.classList.remove('hidden');
         textEntry.classList.remove('hidden');
+        document.getElementById('balloons');
+            balloons.classList.remove("fall");
+            balloons.classList.add("float");
 
     }
 
@@ -145,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             wrongGuesses.push(letter);
             attempts--;
-            pop.play();
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
             updateCatImage(attempts); // Update cat image
@@ -161,6 +163,9 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Congratulations! You won!');
         } else if (attempts <= 0) {
             alert('Game Over! You ran out of attempts!');
+            document.getElementById('balloons');
+            balloons.classList.remove("float");
+            balloons.classList.add("fall");
         }
     }
 
@@ -171,6 +176,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     var pop = new Audio('assets/balloon-pop-48030.mp3');
+    pop.play();
 
+ 
 
 });
