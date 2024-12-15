@@ -3,16 +3,18 @@
 
 :root {
     --title-font: 'UnifrakturMaguntia', cursive;
-    --title-colour: #FF5722;
+    --title-colour: #A66E38;
     --body-font: 'Nunito', sans-serif;
-    --main-background: #3be2ff;
-    --game-background: white;
+    --main-background: #96CEB4;
+    --game-background: #FFEEAD;
     --text-colour: #333;
-    --button-colour: #03A9F4;
-    --button-hover: #0288D1;
-    --button-text: white;
-    --reset-colour: #F44336;
+    --button-colour: #FFAD60;
+    --button-hover: #ffc793;
+    --button-text: #FFF8DE;
+    --reset-colour: #A66E38;
     --reset-hover: #D32F2F;
+    --keyboard-colour: #6faa8e;
+    --keyboard-hover: #96CEB4;
 }
 
 /* General Styles */
@@ -202,8 +204,8 @@ nav ul li a:hover {
 }
 
 .letter-button {
-    background-color: #8BC34A;
-    color: white;
+    background-color: var(--keyboard-colour);
+    color: var(--button-text);
     font-size: 1.2em;
     border: none;
     border-radius: 50%;
@@ -214,7 +216,7 @@ nav ul li a:hover {
 }
 
 .letter-button:hover {
-    background-color: #66BB6A;
+    background-color: var(--keyboard-hover);
 }
 
 .reset-button {
