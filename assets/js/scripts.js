@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     //Declared Variables
+    var pop = new Audio('assets/balloon-pop-48030.mp3');
     const resetButton = document.getElementById('reset-button');
     const submitButton = document.getElementById('submit-button');
     const textEntry = document.getElementById('text-entry');
@@ -132,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
             updateCatImage(attempts); // Update cat image
             displayWord();
+            pop.play();
         }
     }
     
@@ -152,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
             updateCatImage(attempts); // Update cat image
             displayWord();
+            pop.play();
         }
     }
 
@@ -174,8 +177,4 @@ document.addEventListener('DOMContentLoaded', function() {
         catImage.src = `assets/images/balloonsGraphic${attempts}.png`;
         catImage.alt = `A cat holding balloons. You have ${attempts} guesses left.`;
     }
-
-    var pop = new Audio('assets/balloon-pop-48030.mp3');
-    pop.play();
-
 });
