@@ -185,6 +185,11 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+.hints {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
 .keyboard {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -233,6 +238,22 @@ nav ul li a:hover {
 }
 
 .reset-button:hover {
+    background-color: var(--reset-hover);
+    color: var(--button-text-hover);
+}
+
+.hint-button {
+    background-color: var(--reset-colour);
+    color: var(--button-text);
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hint-button:hover {
     background-color: var(--reset-hover);
     color: var(--button-text-hover);
 }
