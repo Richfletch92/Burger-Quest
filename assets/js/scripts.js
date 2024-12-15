@@ -46,11 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function setDifficulty(level) {
         if (level === 'easy') {
-            attempts = 6;
+            attempts = 10;
         } else if (level === 'intermediate') {
-            attempts = 5;
+            attempts = 8;
+            pop.play();
         } else {
-            attempts = 4;
+            attempts = 6;
+            pop.play();
         }
         document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
     }
