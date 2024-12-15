@@ -154,6 +154,10 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+.word-display span {
+    margin: 0 5px;
+}
+
 .wrong-guesses,
 .attempts {
     font-size: 1.2em;
@@ -241,6 +245,8 @@ nav ul li a:hover {
 .difficulty-button:hover {
     background-color: #0288D1;
 }
+
+
 
 /* Media Queries */
 @media (min-width: 768px) {
