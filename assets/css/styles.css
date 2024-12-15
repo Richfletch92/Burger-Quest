@@ -1,3 +1,20 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=UnifrakturMaguntia&display=swap');
+
+:root {
+    --title-font: 'UnifrakturMaguntia', cursive;
+    --title-colour: #FF5722;
+    --body-font: 'Nunito', sans-serif;
+    --main-background: #3be2ff;
+    --game-background: white;
+    --text-colour: #333;
+    --button-colour: #03A9F4;
+    --button-hover: #0288D1;
+    --button-text: white;
+    --reset-colour: #F44336;
+    --reset-hover: #D32F2F;
+}
+
 /* General Styles */
 
 * {
@@ -7,8 +24,8 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', sans-serif;
-    background-color: #3be2ff;
+    font-family: var(--body-font);
+    background-color: var(--main-background);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,9 +40,10 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-family: var(--title-font);
+    font-size: 3em;
     margin-bottom: 20px;
-    color: #FF5722;
+    color: var(--title-colour);
 }
 
 /* Navigation Styles */
@@ -138,7 +156,7 @@ nav ul li a:hover {
 /* Game Styles */
 .game-container {
     text-align: center;
-    background-color: white;
+    background-color: var(--game-background);
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -183,22 +201,6 @@ nav ul li a:hover {
     text-align: center;
 }
 
-#submit-button {
-    background-color: #03A9F4;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s;
-}
-
-#submit-button:hover {
-    background-color: #0288D1;
-}
-
 .letter-button {
     background-color: #8BC34A;
     color: white;
@@ -216,8 +218,8 @@ nav ul li a:hover {
 }
 
 .reset-button {
-    background-color: #F44336;
-    color: white;
+    background-color: var(--reset-colour);
+    color: var(--button-text);
     font-size: 1.5em;
     padding: 15px 30px;
     border: none;
@@ -227,12 +229,12 @@ nav ul li a:hover {
 }
 
 .reset-button:hover {
-    background-color: #D32F2F;
+    background-color: var(--reset-hover);
 }
 
 .difficulty-button {
-    background-color: #03A9F4;
-    color: white;
+    background-color: var(--button-colour);
+    color: var(--button-text);
     font-size: 1.2em;
     padding: 10px 20px;
     border: none;
@@ -243,7 +245,7 @@ nav ul li a:hover {
 }
 
 .difficulty-button:hover {
-    background-color: #0288D1;
+    background-color: var(--button-hover);
 }
 
 

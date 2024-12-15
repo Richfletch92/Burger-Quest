@@ -7,9 +7,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const textEntry = document.getElementById('text-entry');
     let selectedLevel = 'easy'; // Default to 'easy'
     let wordList = {
-        easy: ['cat', 'dog', 'bat', 'fish', 'ball'],
-        intermediate: ['elephant', 'giraffe', 'mountain', 'computer', 'piano'],
-        genius: ['quizzaciously', 'antidisestablishmentarianism', 'floccinaucinihilipilification', 'hippopotomonstrosesquipedaliophobia']
+        easy: [
+            'book', 'cake', 'fish', 'game', 'hand', 'jump', 'kite', 'lamp', 'moon', 'nest', // Four-letter words
+            'apple', 'bread', 'chair', 'dance', 'eagle', 'flame', 'grape', 'house', 'juice', 'knife' // Five-letter words
+        ],
+        medium: [
+            'animal', 'bottle', 'camera', 'danger', 'effort', 'forest', 'garden', 'honest', 'island', 'jungle', // Six-letter words
+            'balloon', 'capture', 'diamond', 'freedom', 'giraffe', 'holiday', 'journey', 'kitchen', 'library', 'monster' // Seven-letter words
+        ],
+        hard: [
+            'adjacent', 'backpack', 'czarina', 'dizzying', 'exorcism', 'fauxhawk', 'gazebo', 'haphazard', 'jujube', 'knapsack', // Eight-letter words
+            'abjection', 'blizzard', 'cognizant', 'dynamized', 'exorcized', 'frizzled', 'gazillion', 'haphazard', 'juxtapose', 'knockdown' // Nine-letter words
+        ]
     };
     let attempts;
     let word;
@@ -47,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function setDifficulty(level) {
         if (level === 'easy') {
             attempts = 10;
-        } else if (level === 'intermediate') {
+        } else if (level === 'medium') {
             attempts = 8;
             pop.play();
         } else {
