@@ -30,16 +30,18 @@
             <!-- Difficulty Selection Buttons -->
             <div id="difficulty-buttons">
                 <button class="difficulty-button" data-level="easy">Easy</button>
-                <button class="difficulty-button" data-level="intermediate">Intermediate</button>
-                <button class="difficulty-button" data-level="genius">Genius</button>
+                <button class="difficulty-button" data-level="medium">Medium</button>
+                <button class="difficulty-button" data-level="hard">Hard</button>
             </div>
             <!-- Game Display -->
             <div class="word-display" id="word-display"></div>
-            <div class="attempts">Attempts: <span id="attempts">9</span></div>
+            <div class="attempts">Attempts: <span id="attempts"></span></div>
             <div class="wrong-guesses" id="wrong-guesses"></div>
+            <div class="hints hidden" id="hint-display"></div>
             <div class="keyboard" id="keyboard"></div>
             <div class="hidden" id="text-entry"><input maxlength="1" id="text-entry-guess" type="text"><button id="submit-button">Submit</button></div>
             <!-- Start Game Button -->
+            <button id="hint-button" class="hint-button hidden">Show Hint</button>
             <button id="reset-button" class="reset-button hidden">Reset Game</button>
         </section>
     </main>
