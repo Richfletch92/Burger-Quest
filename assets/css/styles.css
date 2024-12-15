@@ -3,18 +3,19 @@
 
 :root {
     --title-font: 'UnifrakturMaguntia', cursive;
-    --title-colour: #A66E38;
+    --title-colour: #fca644;
     --body-font: 'Nunito', sans-serif;
-    --main-background: #96CEB4;
-    --game-background: #FFEEAD;
+    --main-background: #B1F0F7;
+    --game-background: #F5F0CD;
     --text-colour: #333;
-    --button-colour: #FFAD60;
-    --button-hover: #ffc793;
+    --button-colour: #37bdf7;
+    --button-hover: #B1F0F7;
     --button-text: #FFF8DE;
-    --reset-colour: #A66E38;
-    --reset-hover: #D32F2F;
-    --keyboard-colour: #6faa8e;
-    --keyboard-hover: #96CEB4;
+    --button-text-hover: #727272;
+    --reset-colour: #fca644;
+    --reset-hover: #ffcd94;
+    --keyboard-colour: #37bdf7;
+    --keyboard-hover: #B1F0F7;
 }
 
 /* General Styles */
@@ -210,13 +211,14 @@ nav ul li a:hover {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.5s;
     height: 40px;
     width: 40px;
 }
 
 .letter-button:hover {
     background-color: var(--keyboard-hover);
+    color: var(--button-text-hover);
 }
 
 .reset-button {
@@ -227,11 +229,12 @@ nav ul li a:hover {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.5s;
 }
 
 .reset-button:hover {
     background-color: var(--reset-hover);
+    color: var(--button-text-hover);
 }
 
 .difficulty-button {
@@ -243,11 +246,12 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     margin: 10px;
-    transition: background-color 0.3s;
+    transition: 0.5s;
 }
 
 .difficulty-button:hover {
     background-color: var(--button-hover);
+    color: var(--button-text-hover);
 }
 
 
