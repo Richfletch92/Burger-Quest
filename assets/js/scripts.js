@@ -291,6 +291,7 @@ document.addEventListener('DOMContentLoaded', function () {
      * Starts the game
      */
     function startGame() {
+        const getHintButton = document.getElementById("get-hint");
         setDifficulty(selectedLevel);
         guessedLetters = [];
         wrongGuesses = [];
@@ -483,6 +484,7 @@ document.addEventListener('DOMContentLoaded', function () {
      * Gives the player a free letter hint
      */
     function showHintButton() {
+        let getHintButton = document.getElementById("get-hint");
         getHintButton = document.getElementById("get-hint");
         getHintButton.style.display = "inline";
         getHintButton.addEventListener("click", getHint);
@@ -492,6 +494,7 @@ document.addEventListener('DOMContentLoaded', function () {
      * Gives the player a free letter hint
      */
     function getHint() {
+        let getHintButton = document.getElementById("get-hint");
         getHintButton = document.getElementById("get-hint");
         const displayWords = document.querySelectorAll("#word-display span");
         const hiddenLetters = word
