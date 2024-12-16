@@ -1,3 +1,23 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=UnifrakturMaguntia&display=swap');
+
+:root {
+    --title-font: 'UnifrakturMaguntia', cursive;
+    --title-colour: #fca644;
+    --body-font: 'Nunito', sans-serif;
+    --main-background: #B1F0F7;
+    --game-background: #F5F0CD;
+    --text-colour: #333;
+    --button-colour: #37bdf7;
+    --button-hover: #B1F0F7;
+    --button-text: #FFF8DE;
+    --button-text-hover: #727272;
+    --reset-colour: #fca644;
+    --reset-hover: #ffcd94;
+    --keyboard-colour: #37bdf7;
+    --keyboard-hover: #B1F0F7;
+}
+
 /* General Styles */
 
 * {
@@ -7,8 +27,8 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', sans-serif;
-    background-color: #3be2ff;
+    font-family: var(--body-font);
+    background-color: var(--main-background);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,9 +43,11 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-family: var(--title-font);
+    font-size: 3em;
     margin-bottom: 20px;
-    color: #FF5722;
+    color: var(--title-colour);
+    text-shadow: 3px 3px 3px #ababab;
 }
 
 /* Navigation Styles */
@@ -96,7 +118,7 @@ nav ul li a:hover {
     position: relative;
     animation-name: fall;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: once;
 }
 
 @keyframes fall {
@@ -112,7 +134,7 @@ nav ul li a:hover {
 
     100% {
         transform: rotate(100deg);
-        top: 5000px;
+        top: 500px;
     }
 }
 
@@ -121,20 +143,27 @@ nav ul li a:hover {
 }
 
 #cat {
-    height: 500px;
+    height: 400px;
 }
 
 #animation-container {
     margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#burger, #balloons {
+    margin: 0 10px; /* Optional: Add some spacing between the divs */
 }
 
 /* Game Styles */
 .game-container {
     text-align: center;
-    background-color: white;
+    background-color: var(--game-background);
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 90%;
     max-width: 500px;
     padding: 20px;
     margin-bottom: 50px;
@@ -147,8 +176,17 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+.word-display span {
+    margin: 0 5px;
+}
+
 .wrong-guesses,
 .attempts {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hints {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
@@ -172,55 +210,105 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.letter-button {
+    background-color: var(--keyboard-colour);
+    color: var(--button-text);
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    height: 40px;
+    width: 40px;
+}
+
 #submit-button {
-    background-color: #03A9F4;
-    color: white;
+    background-color: var(--button-colour);
+    color: var(--button-text);
     font-size: 1.2em;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px;
-    transition: background-color 0.3s;
+    transition: 0.5s;
 }
 
 #submit-button:hover {
-    background-color: #0288D1;
-}
-
-.letter-button {
-    background-color: #8BC34A;
-    color: white;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    height: 40px;
-    width: 40px;
+    background-color: var(--button-hover);
+    color: var(--button-text-hover);
 }
 
 .letter-button:hover {
-    background-color: #66BB6A;
+    background-color: var(--keyboard-hover);
+    color: var(--button-text-hover);
 }
 
 .reset-button {
-    background-color: #F44336;
-    color: white;
+    background-color: var(--reset-colour);
+    color: var(--button-text);
     font-size: 1.5em;
     padding: 15px 30px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.5s;
 }
 
 .reset-button:hover {
-    background-color: #D32F2F;
+    background-color: var(--reset-hover);
+    color: var(--button-text-hover);
+}
+
+.hint-button {
+    background-color: var(--reset-colour);
+    color: var(--button-text);
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hint-button:hover {
+    background-color: var(--reset-hover);
+    color: var(--button-text-hover);
 }
 
 .difficulty-button {
-    background-color: #03A9F4;
+    background-color: var(--button-colour);
+    color: var(--button-text);
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.difficulty-button:hover {
+    background-color: var(--button-hover);
+    color: var(--button-text-hover);
+}
+
+/* Score board style */
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .hinBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #get-hint {
+    background-color: #03a9f4;
     color: white;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -229,11 +317,30 @@ nav ul li a:hover {
     cursor: pointer;
     margin: 10px;
     transition: background-color 0.3s;
-}
+    display: none;
+  }
+  /* animate the pop-up message style */
+  .popup {
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .popup.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
-.difficulty-button:hover {
-    background-color: #0288D1;
-}
+
 
 /* Media Queries */
 @media (min-width: 768px) {
@@ -260,6 +367,7 @@ nav ul li a:hover {
     }
 
     .game-container {
+        margin-top: 100px;
         max-width: 500px;
     }
 

@@ -1,425 +1,484 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=UnifrakturMaguntia&display=swap');
+
+:root {
+    --title-font: 'UnifrakturMaguntia', cursive;
+    --title-colour: #fca644;
+    --body-font: 'Nunito', sans-serif;
+    --main-background: #B1F0F7;
+    --game-background: #F5F0CD;
+    --text-colour: #333;
+    --button-colour: #37bdf7;
+    --button-hover: #B1F0F7;
+    --button-text: #FFF8DE;
+    --button-text-hover: #727272;
+    --reset-colour: #fca644;
+    --reset-hover: #ffcd94;
+    --keyboard-colour: #37bdf7;
+    --keyboard-hover: #B1F0F7;
+}
+
 /* General Styles */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Comic Sans MS", sans-serif;
-  background-color: #3be2ff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding-top: 50px;
+    font-family: var(--body-font);
+    background-color: var(--main-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 50px;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #ff5722;
+    font-family: var(--title-font);
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--title-colour);
+    text-shadow: 3px 3px 3px #ababab;
 }
 
 /* Navigation Styles */
 nav {
-  background-color: #333;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  /* Ensure it stays above other content */
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it stays above other content */
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav ul li {
-  display: inline;
+    display: inline;
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
 }
 
 nav ul li a:hover {
-  background-color: #575757;
+    background-color: #575757;
 }
 
 /* Animation Styles */
 .float {
-  position: relative;
-  animation-name: float;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+    position: relative;
+    animation-name: float;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes float {
-  0% {
-    top: 10px;
-  }
+    0% {
+        top: 10px;
+    }
 
-  25% {
-    top: 0px;
-  }
+    25% {
+        top: 0px;
+    }
 
-  50% {
-    top: 20px;
-  }
+    50% {
+        top: 20px;
+    }
 
-  75% {
-    top: 20px;
-  }
+    75% {
+        top: 20px;
+    }
 
-  100% {
-    top: 10px;
-  }
+    100% {
+        top: 10px;
+    }
 }
 
 .fall {
-  position: relative;
-  animation-name: fall;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+    position: relative;
+    animation-name: fall;
+    animation-duration: 2s;
+    animation-iteration-count: once;
 }
 
 @keyframes fall {
-  0% {
-    transform: rotate(80deg);
-    top: 50px;
-  }
+    0% {
+        transform: rotate(80deg);
+        top: 50px;
+    }
 
-  50% {
-    transform: rotate(90deg);
-    top: 100px;
-  }
+    50% {
+        transform: rotate(90deg);
+        top: 100px;
+    }
 
-  100% {
-    transform: rotate(100deg);
-    top: 5000px;
-  }
+    100% {
+        transform: rotate(100deg);
+        top: 500px;
+    }
 }
 
 #burger {
-  float: left;
+    float: left;
 }
 
 #cat {
-  height: 500px;
+    height: 400px;
 }
 
 #animation-container {
-  margin-left: 30px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#burger, #balloons {
+    margin: 0 10px; /* Optional: Add some spacing between the divs */
 }
 
 /* Game Styles */
 .game-container {
-  text-align: center;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  padding: 20px;
-  margin-bottom: 50px;
+    text-align: center;
+    background-color: var(--game-background);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    margin-bottom: 50px;
 }
 
 .word-display {
-  font-size: 2em;
-  font-weight: bold;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.word-display span {
+    margin: 0 5px;
 }
 
 .wrong-guesses,
 .attempts {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hints {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .keyboard {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
-  margin-bottom: 20px;
-  display: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-bottom: 20px;
+    display: none;
 }
 
 #text-entry {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #text-entry input {
-  width: 40px;
-  font-size: 1.2rem;
-  height: 42px;
-  text-align: center;
-}
-
-#submit-button {
-  background-color: #03a9f4;
-  color: white;
-  font-size: 1.2em;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px;
-  transition: background-color 0.3s;
-}
-
-#submit-button:hover {
-  background-color: #0288d1;
+    width: 40px;
+    font-size: 1.2rem;
+    height: 42px;
+    text-align: center;
 }
 
 .letter-button {
-  background-color: #8bc34a;
-  color: white;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  height: 40px;
-  width: 40px;
+    background-color: var(--keyboard-colour);
+    color: var(--button-text);
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    height: 40px;
+    width: 40px;
+}
+
+#submit-button {
+    background-color: var(--button-colour);
+    color: var(--button-text);
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+#submit-button:hover {
+    background-color: var(--button-hover);
+    color: var(--button-text-hover);
 }
 
 .letter-button:hover {
-  background-color: #66bb6a;
+    background-color: var(--keyboard-hover);
+    color: var(--button-text-hover);
 }
 
 .reset-button {
-  background-color: #f44336;
-  color: white;
-  font-size: 1.5em;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    background-color: var(--reset-colour);
+    color: var(--button-text);
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .reset-button:hover {
-  background-color: #d32f2f;
+    background-color: var(--reset-hover);
+    color: var(--button-text-hover);
+}
+
+.hint-button {
+    background-color: var(--reset-colour);
+    color: var(--button-text);
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hint-button:hover {
+    background-color: var(--reset-hover);
+    color: var(--button-text-hover);
 }
 
 .difficulty-button {
-  background-color: #03a9f4;
-  color: white;
-  font-size: 1.2em;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px;
-  transition: background-color 0.3s;
+    background-color: var(--button-colour);
+    color: var(--button-text);
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5s;
 }
 
 .difficulty-button:hover {
-  background-color: #0288d1;
+    background-color: var(--button-hover);
+    color: var(--button-text-hover);
 }
+
 /* Score board style */
 #scoreboard {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  gap: 20px;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-.hinBtn {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-#get-hint {
-  background-color: #03a9f4;
-  color: white;
-  font-size: 1.2em;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px;
-  transition: background-color 0.3s;
-  display: none;
-}
-/* animate the pop-up message style */
-.popup {
-  position: fixed;
-  top: 40%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: #4caf50;
-  color: white;
-  font-size: 24px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .hinBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #get-hint {
+    background-color: #03a9f4;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+    display: none;
+  }
+  /* animate the pop-up message style */
+  .popup {
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .popup.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
-.popup.show {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.1);
-}
 
-.hidden {
-  display: none;
-}
 
 /* Media Queries */
 @media (min-width: 768px) {
-  #main-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-  }
+    #main-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
-  #animation-container {
-    margin-left: 20px;
-    order: 1;
-  }
+    #animation-container {
+        margin-left: 20px;
+        order: 1;
+    }
 
-  /* Raise the cat image when the keyboard is not visible */
-  .raised {
-    margin-top: -200px;
-  }
+    /* Raise the cat image when the keyboard is not visible */
+    .raised {
+        margin-top: -200px;
+    }
 
-  .keyboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .keyboard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-  .game-container {
-    max-width: 500px;
-  }
+    .game-container {
+        margin-top: 100px;
+        max-width: 500px;
+    }
 
-  #text-entry {
-    display: none;
-  }
+    #text-entry {
+        display: none;
+    }
+
 }
 
 @media (max-height: 800px) {
-  #cat {
-    margin-top: 150px;
-  }
+    #cat {
+        margin-top: 150px;
+    }
 
-  .game-container {
-    padding: 15px;
-  }
+    .game-container {
+        padding: 15px;
+    }
 
-  .word-display {
-    font-size: 1.8em;
-  }
+    .word-display {
+        font-size: 1.8em;
+    }
 
-  .wrong-guesses,
-  .attempts {
-    font-size: 1em;
-  }
+    .wrong-guesses,
+    .attempts {
+        font-size: 1em;
+    }
 
-  .letter-button {
-    font-size: 1em;
-    height: 35px;
-    width: 35px;
-  }
+    .letter-button {
+        font-size: 1em;
+        height: 35px;
+        width: 35px;
+    }
 
-  .reset-button {
-    font-size: 1.2em;
-    padding: 10px 20px;
-  }
+    .reset-button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
 
-  .difficulty-button {
-    font-size: 1em;
-    padding: 8px 16px;
-  }
+    .difficulty-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
 }
 
 @media (max-height: 600px) {
-  #cat {
-    height: 400px;
-  }
+    #cat {
+        height: 400px;
+    }
 
-  .game-container {
-    padding: 10px;
-  }
+    .game-container {
+        padding: 10px;
+    }
 
-  .word-display {
-    font-size: 1.5em;
-  }
+    .word-display {
+        font-size: 1.5em;
+    }
 
-  .wrong-guesses,
-  .attempts {
-    font-size: 0.9em;
-  }
+    .wrong-guesses,
+    .attempts {
+        font-size: 0.9em;
+    }
 
-  .letter-button {
-    font-size: 0.9em;
-    height: 30px;
-    width: 30px;
-  }
+    .letter-button {
+        font-size: 0.9em;
+        height: 30px;
+        width: 30px;
+    }
 
-  .reset-button {
-    font-size: 1em;
-    padding: 8px 16px;
-  }
+    .reset-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
 
-  .difficulty-button {
-    font-size: 0.9em;
-    padding: 6px 12px;
-  }
+    .difficulty-button {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
 }
 
 @media (max-height: 400px) {
-  #cat {
-    height: 300px;
-    margin-top: 200px;
-  }
+    #cat {
+        height: 300px;
+        margin-top: 200px;
+    }
 
-  .game-container {
-    padding: 5px;
-  }
+    .game-container {
+        padding: 5px;
+    }
 
-  .word-display {
-    font-size: 1.2em;
-  }
+    .word-display {
+        font-size: 1.2em;
+    }
 
-  .wrong-guesses,
-  .attempts {
-    font-size: 0.8em;
-  }
+    .wrong-guesses,
+    .attempts {
+        font-size: 0.8em;
+    }
 
-  .letter-button {
-    font-size: 0.8em;
-    height: 25px;
-    width: 25px;
-  }
+    .letter-button {
+        font-size: 0.8em;
+        height: 25px;
+        width: 25px;
+    }
 
-  .reset-button {
-    font-size: 0.8em;
-    padding: 5px 10px;
-  }
+    .reset-button {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
 
-  .difficulty-button {
-    font-size: 0.8em;
-    padding: 5px 10px;
-  }
+    .difficulty-button {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
 }
