@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    
 
     <title>Burger Quest!</title>
     <link rel="stylesheet" href="assets/css/Jo-styles.css">
@@ -29,7 +29,8 @@
                 <img src="assets/images/burgerGraphic1.png" alt="A burger hangs from a balloon. Help the cat reach it!">
             </div>
             <div id="balloons" class="float raised">
-                <img id="cat" src="assets/images/balloonsGraphic10.png" alt="A cat holding balloons. You have ten guesses left.">
+                <img id="cat" src="assets/images/balloonsGraphic10.png"
+                    alt="A cat holding balloons. You have ten guesses left.">
             </div>
         </section>
         <section class="game-container">
@@ -45,11 +46,19 @@
             <div class="attempts">Attempts: <span id="attempts"></span></div>
             <div class="wrong-guesses" id="wrong-guesses"></div>
             <div class="hints hidden" id="hint-display"></div>
+            <div class="hinBtn">
+                <button id="get-hint">Reveal Letter</button>
+            </div>
             <div class="keyboard" id="keyboard"></div>
-            <div class="hidden" id="text-entry"><input maxlength="1" id="text-entry-guess" type="text"><button id="submit-button">Submit</button></div>
+            <div class="hidden" id="text-entry"><input maxlength="1" id="text-entry-guess" type="text"><button
+                    id="submit-button">Submit</button></div>
             <!-- Start Game Button -->
             <button id="hint-button" class="hint-button hidden">Show Hint</button>
             <button id="reset-button" class="reset-button hidden">Reset Game</button>
+            <div id="scoreboard">
+                <span id="win-count">Wins: 0</span>
+                <span id="loss-count">Losses: 0</span>
+            </div>
         </section>
     </main>
 </div>

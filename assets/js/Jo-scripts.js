@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     // Declared Variables
     var pop = new Audio('assets/balloon-pop-48030.mp3');
@@ -9,70 +9,244 @@ document.addEventListener('DOMContentLoaded', function() {
     const hintDisplay = document.getElementById('hint-display');
     let selectedLevel = 'easy'; // Default to 'easy'
     let wordList = {
-        easy: [
-            { word: 'book', hint: 'You read it.' },
-            { word: 'cake', hint: 'A sweet baked dessert.' },
-            { word: 'fish', hint: 'Lives in water.' },
-            { word: 'game', hint: 'Played for fun.' },
-            { word: 'hand', hint: 'Part of your body.' },
-            { word: 'jump', hint: 'To leap into the air.' },
-            { word: 'kite', hint: 'Flies in the sky.' },
-            { word: 'lamp', hint: 'Provides light.' },
-            { word: 'moon', hint: 'Earth\'s natural satellite.' },
-            { word: 'nest', hint: 'Birds live in it.' },
-            { word: 'apple', hint: 'A fruit.' },
-            { word: 'bread', hint: 'Baked food made from flour.' },
-            { word: 'chair', hint: 'You sit on it.' },
-            { word: 'dance', hint: 'Move rhythmically to music.' },
-            { word: 'eagle', hint: 'A large bird of prey.' },
-            { word: 'flame', hint: 'A hot glowing body of ignited gas.' },
-            { word: 'grape', hint: 'A small, round fruit.' },
-            { word: 'house', hint: 'A place where people live.' },
-            { word: 'juice', hint: 'A drink made from fruit.' },
-            { word: 'knife', hint: 'A tool used for cutting.' }
+        easy: [{
+                word: 'book',
+                hint: 'You read it.'
+            },
+            {
+                word: 'cake',
+                hint: 'A sweet baked dessert.'
+            },
+            {
+                word: 'fish',
+                hint: 'Lives in water.'
+            },
+            {
+                word: 'game',
+                hint: 'Played for fun.'
+            },
+            {
+                word: 'hand',
+                hint: 'Part of your body.'
+            },
+            {
+                word: 'jump',
+                hint: 'To leap into the air.'
+            },
+            {
+                word: 'kite',
+                hint: 'Flies in the sky.'
+            },
+            {
+                word: 'lamp',
+                hint: 'Provides light.'
+            },
+            {
+                word: 'moon',
+                hint: 'Earth\'s natural satellite.'
+            },
+            {
+                word: 'nest',
+                hint: 'Birds live in it.'
+            },
+            {
+                word: 'apple',
+                hint: 'A fruit.'
+            },
+            {
+                word: 'bread',
+                hint: 'Baked food made from flour.'
+            },
+            {
+                word: 'chair',
+                hint: 'You sit on it.'
+            },
+            {
+                word: 'dance',
+                hint: 'Move rhythmically to music.'
+            },
+            {
+                word: 'eagle',
+                hint: 'A large bird of prey.'
+            },
+            {
+                word: 'flame',
+                hint: 'A hot glowing body of ignited gas.'
+            },
+            {
+                word: 'grape',
+                hint: 'A small, round fruit.'
+            },
+            {
+                word: 'house',
+                hint: 'A place where people live.'
+            },
+            {
+                word: 'juice',
+                hint: 'A drink made from fruit.'
+            },
+            {
+                word: 'knife',
+                hint: 'A tool used for cutting.'
+            }
         ],
-        medium: [
-            { word: 'animal', hint: 'A living organism.' },
-            { word: 'bottle', hint: 'A container for liquids.' },
-            { word: 'camera', hint: 'Used to take photos.' },
-            { word: 'danger', hint: 'A threat of harm.' },
-            { word: 'effort', hint: 'A vigorous attempt.' },
-            { word: 'forest', hint: 'A large area covered with trees.' },
-            { word: 'garden', hint: 'A plot of land for growing plants.' },
-            { word: 'honest', hint: 'Truthful and sincere.' },
-            { word: 'island', hint: 'Land surrounded by water.' },
-            { word: 'jungle', hint: 'A dense forest.' },
-            { word: 'balloon', hint: 'A flexible bag filled with air.' },
-            { word: 'capture', hint: 'To take into possession.' },
-            { word: 'diamond', hint: 'A precious stone.' },
-            { word: 'freedom', hint: 'The power to act as one wants.' },
-            { word: 'giraffe', hint: 'A tall animal with a long neck.' },
-            { word: 'holiday', hint: 'A day of celebration.' },
-            { word: 'journey', hint: 'Travel from one place to another.' },
-            { word: 'kitchen', hint: 'A room for cooking.' },
-            { word: 'library', hint: 'A place with a collection of books.' },
-            { word: 'monster', hint: 'A large, frightening creature.' }
+        medium: [{
+                word: 'animal',
+                hint: 'A living organism.'
+            },
+            {
+                word: 'bottle',
+                hint: 'A container for liquids.'
+            },
+            {
+                word: 'camera',
+                hint: 'Used to take photos.'
+            },
+            {
+                word: 'danger',
+                hint: 'A threat of harm.'
+            },
+            {
+                word: 'effort',
+                hint: 'A vigorous attempt.'
+            },
+            {
+                word: 'forest',
+                hint: 'A large area covered with trees.'
+            },
+            {
+                word: 'garden',
+                hint: 'A plot of land for growing plants.'
+            },
+            {
+                word: 'honest',
+                hint: 'Truthful and sincere.'
+            },
+            {
+                word: 'island',
+                hint: 'Land surrounded by water.'
+            },
+            {
+                word: 'jungle',
+                hint: 'A dense forest.'
+            },
+            {
+                word: 'balloon',
+                hint: 'A flexible bag filled with air.'
+            },
+            {
+                word: 'capture',
+                hint: 'To take into possession.'
+            },
+            {
+                word: 'diamond',
+                hint: 'A precious stone.'
+            },
+            {
+                word: 'freedom',
+                hint: 'The power to act as one wants.'
+            },
+            {
+                word: 'giraffe',
+                hint: 'A tall animal with a long neck.'
+            },
+            {
+                word: 'holiday',
+                hint: 'A day of celebration.'
+            },
+            {
+                word: 'journey',
+                hint: 'Travel from one place to another.'
+            },
+            {
+                word: 'kitchen',
+                hint: 'A room for cooking.'
+            },
+            {
+                word: 'library',
+                hint: 'A place with a collection of books.'
+            },
+            {
+                word: 'monster',
+                hint: 'A large, frightening creature.'
+            }
         ],
-        hard: [
-            { word: 'adjacent', hint: 'Next to or adjoining something else.' },
-            { word: 'backpack', hint: 'A bag carried on the back.' },
-            { word: 'czarina', hint: 'A female Russian ruler.' },
-            { word: 'dizzying', hint: 'Causing dizziness.' },
-            { word: 'exorcism', hint: 'The act of expelling evil spirits.' },
-            { word: 'fauxhawk', hint: 'A hairstyle resembling a mohawk.' },
-            { word: 'gazebo', hint: 'A freestanding open-sided structure.' },
-            { word: 'haphazard', hint: 'Lacking any obvious principle of organization.' },
-            { word: 'jujube', hint: 'A small, sweet fruit.' },
-            { word: 'knapsack', hint: 'A bag carried on the back.' },
-            { word: 'abjection', hint: 'A state of misery.' },
-            { word: 'blizzard', hint: 'A severe snowstorm.' },
-            { word: 'cognizant', hint: 'Having knowledge or awareness.' },
-            { word: 'dynamized', hint: 'Made dynamic.' },
-            { word: 'exorcized', hint: 'Expelled evil spirits.' },
-            { word: 'frizzled', hint: 'Fried until crisp.' },
-            { word: 'gazillion', hint: 'A very large number.' },
-            { word: 'juxtapose', hint: 'Place side by side for contrast.' },
-            { word: 'knockdown', hint: 'A forceful blow.' }
+        hard: [{
+                word: 'adjacent',
+                hint: 'Next to or adjoining something else.'
+            },
+            {
+                word: 'backpack',
+                hint: 'A bag carried on the back.'
+            },
+            {
+                word: 'czarina',
+                hint: 'A female Russian ruler.'
+            },
+            {
+                word: 'dizzying',
+                hint: 'Causing dizziness.'
+            },
+            {
+                word: 'exorcism',
+                hint: 'The act of expelling evil spirits.'
+            },
+            {
+                word: 'fauxhawk',
+                hint: 'A hairstyle resembling a mohawk.'
+            },
+            {
+                word: 'gazebo',
+                hint: 'A freestanding open-sided structure.'
+            },
+            {
+                word: 'haphazard',
+                hint: 'Lacking any obvious principle of organization.'
+            },
+            {
+                word: 'jujube',
+                hint: 'A small, sweet fruit.'
+            },
+            {
+                word: 'knapsack',
+                hint: 'A bag carried on the back.'
+            },
+            {
+                word: 'abjection',
+                hint: 'A state of misery.'
+            },
+            {
+                word: 'blizzard',
+                hint: 'A severe snowstorm.'
+            },
+            {
+                word: 'cognizant',
+                hint: 'Having knowledge or awareness.'
+            },
+            {
+                word: 'dynamized',
+                hint: 'Made dynamic.'
+            },
+            {
+                word: 'exorcized',
+                hint: 'Expelled evil spirits.'
+            },
+            {
+                word: 'frizzled',
+                hint: 'Fried until crisp.'
+            },
+            {
+                word: 'gazillion',
+                hint: 'A very large number.'
+            },
+            {
+                word: 'juxtapose',
+                hint: 'Place side by side for contrast.'
+            },
+            {
+                word: 'knockdown',
+                hint: 'A forceful blow.'
+            }
         ]
     };
     let attempts;
@@ -80,6 +254,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentHint;
     let guessedLetters = [];
     let wrongGuesses = [];
+    let wins = 0;
+    let losses = 0;
+    let consecutiveWrong = 0;
+
 
     // Event Listeners
     resetButton.addEventListener('click', startGame);
@@ -116,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const wordObject = getRandomWord(selectedLevel);
         word = wordObject.word.toLowerCase();
         currentHint = wordObject.hint; // Store the hint
-        hintDisplay.textContent = currentHint; // Set the hint text
+        hintDisplay.textContent = `Hint: ${currentHint}`; // Set the hint text
         displayWord();
         displayKeyboard();
         document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
@@ -167,11 +345,15 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             wrongGuesses.push(letter);
             attempts--;
+            consecutiveWrong++;
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
             updateCatImage(attempts); // Update cat image
             displayWord();
             pop.play();
+            if (consecutiveWrong >= 2) {
+                showHintButton(); // Show the hint button after 3 consecutive wrong guesses
+            }
         }
     }
 
@@ -184,22 +366,27 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             wrongGuesses.push(letter);
             attempts--;
+            consecutiveWrong++;
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
             updateCatImage(attempts); // Update cat image
             displayWord();
             pop.play();
         }
+        if (consecutiveWrong >= 2) {
+            showHintButton(); // Show the hint button after 3 consecutive wrong guesses
+          }
     }
 
     function checkGameStatus() {
         if (word.split('').every(letter => guessedLetters.includes(letter))) {
-            alert('Congratulations! You won!');
+            handleWin();
         } else if (attempts <= 0) {
             alert('Game Over! You ran out of attempts!');
             const balloons = document.getElementById('balloons');
             balloons.classList.remove("float");
             balloons.classList.add("fall");
+            handleLoss();
         }
     }
 
@@ -211,5 +398,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function toggleHint() {
         hintDisplay.classList.toggle('hidden');
+    }
+
+    /**
+     * Handles the win function
+     */
+    function handleWin() {
+        wins++;
+        document.getElementById("win-count").textContent = `Wins: ${wins}`;
+        alert("Congratulations! You won!");
+    }
+
+    /**
+     * Handles the loss function
+     */
+    function handleLoss() {
+        losses++;
+        document.getElementById("loss-count").textContent = `Looses: ${losses}`;
+        alert("Game Over! You ran out of attempts!");
+    }
+
+    /**
+     * Gives the player a free letter hint
+     */
+    function showHintButton() {
+        getHintButton = document.getElementById("get-hint");
+        getHintButton.style.display = "inline";
+        getHintButton.addEventListener("click", getHint);
+    }
+
+    function getHint() {
+        getHintButton = document.getElementById("get-hint");
+        const displayWords = document.querySelectorAll("#word-display span");
+        const hiddenLetters = word
+            .split("")
+            .filter((letter) => !guessedLetters.includes(letter));
+        for (let displayWord of displayWords) {
+            if (displayWord.textContent === "_") {
+                displayWord.textContent = hiddenLetters[0];
+                guessedLetters.push(hiddenLetters[0]);
+                hiddenLetters.shift();
+                consecutiveWrong = 0;
+                getHintButton.style.display = "none";
+                if (hiddenLetters.length === 0) {
+                    consecutiveWrong = 0;
+                    handleWin();
+                }
+                break;
+            }
+        }
     }
 });
