@@ -2,41 +2,48 @@
 
 ## Code Institute - Hackathon 1
 
-![Site example on multiple devices.](assets/images/readme-images/responsive.png)
+![Site example on multiple devices.](https://i.gyazo.com/81c86b35205e4300b227e4dc3ec9b811.png)
 
 [Click Here to view the Live Project.](https://richfletch92.github.io/Burger-Quest/)
 
 [Click here to view the Repository.](https://github.com/Richfletch92/Burger-Quest)
 
+## Meet the team
+- Richard - [Github](https://github.com/Richfletch92)
+- Jo - [Github](https://github.com/Jo-JPEG)
+- Moe - [Github](https://github.com/moe-ysf)
+- Sardar - [Github](https://github.com/SardarAmiri)
+
 ## Table of Contents
 
 - [About](#about)
 - [User Value Explanations](#user-value-explanations)
+- [Installation](#installation)
+    - [Dependencies](#dependencies)
+- [How to Play](#how-to-play)
 - [Design](#design)
-- [Features](#general-features)
+- [General Features](#general-features)
+- [Future Features](#future-features)
 - [AI Overview](#ai-overview)
 - [Things to be Improved](#things-to-be-improved)
 - [Technologies Used](#technologies-used)
-- [Image Sources](#image-sources)
-- [Logo Sources](#logo-sources)
-- [JavaScript Sources](#java-script-sources)
 - [Validation](#validation)
     - [HTML](#html)
     - [CSS](#css)
+    - [JavaScript](#javascript)
 - [Lighthouse Performance](#lighthouse-performance)
     - [Mobile](#mobile)
     - [Desktop](#desktop)
 - [Wireframes](#wireframes)
-    - [Home Wireframe](#home-wireframe)
-    - [About Us Wireframe](#about-us-wireframe)
-    - [Contact Us Wireframe](#contact-us-wireframe)
-    - [Resources Wireframe](#resources-wireframe)
 
 ## About
-
-Provide a brief description of your project, its purpose, and its goals.
+Burger Quest is an interactive and engaging word-guessing game designed for players of all ages. The primary goal of the game is to guess the hidden word by selecting letters within a limited number of attempts. The game offers various difficulty levels to cater to different skill sets, making it both challenging and entertaining. The project was developed as part of a hackathon organized by Code Institute, with a focus on creating a fun and educational experience that helps improve vocabulary and spelling skills. The design is kid-friendly, featuring vibrant colors and playful animations to enhance the user experience.
 
 ## User Value Explanations
+- **Entertainment**: The game provides a fun and engaging way to pass the time.
+- **Challenge**: Different difficulty levels offer varying degrees of challenge, keeping the game interesting.
+- **Learning**: Players can improve their vocabulary and spelling skills while playing.
+- **Accessibility**: The game is easy to understand and play, making it accessible to a wide audience.
 
 ## Installation
 - Clone or download the repository.
@@ -102,12 +109,9 @@ The game does not require external libraries. All styles and scripts are include
 
 ## AI Overview
 
-Describe how AI was used in your project.
-
-## Things to be Improved
-
-- **Improvement 1**: Describe what needs to be improved.
-- **Improvement 2**: Describe what needs to be improved.
+- Ai was used to generate the words for the game and hints. 
+- It was also used to bug check code when having problems.
+- It was used to help create JavaScript functions.
 
 ## Technologies Used
 
@@ -119,43 +123,19 @@ Describe how AI was used in your project.
 - **Chat-GPT**: For Q & A and code generation.
 - **favicon.io**: For creation of favicons.
 
-## Image Sources
-
-- **Source 1**: [Source Name](source-link)
-- **Source 2**: [Source Name](source-link)
-
-## Logo Sources
-
-- **Logo 1**: [Logo Name](logo-link)
-- **Logo 2**: [Logo Name](logo-link)
-
-## JavaScript Sources
-
-- **Source 1**: [Source Name](source-link)
-
 ## Validation
 
 ### HTML
-
-**Page Name**
 
 ![Validation Image](assets/images/readme-images/validation-image.png)
 
 ### CSS
 
-**Style.css**
-
 ![CSS Validation](assets/images/readme-images/css-validation.png)
 
-## Lighthouse Performance
+### JavaScript
 
-### Mobile
-
-![Mobile Lighthouse Performance](assets/images/readme-images/lighthouse-mobile.png)
-
-### Desktop
-
-![Desktop Lighthouse Performance](assets/images/readme-images/lighthouse-desktop.png)
+![JavaScript Validation]()
 
 ## Wireframes
 
@@ -176,4 +156,14 @@ Describe how AI was used in your project.
 ### Mobile Layout Wireframe
 
 ![Mobile wireframe](assets/images/readme/mobilegamewireframe.png)
+
+## Lighthouse Performance
+
+### Mobile
+
+![Mobile Lighthouse Performance](assets/images/readme/lighthouse_mobile.png)
+
+### Desktop
+
+![Desktop Lighthouse Performance](assets/images/readme/lighthouse_desktop.png)
 
