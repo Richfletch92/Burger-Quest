@@ -118,7 +118,7 @@ nav ul li a:hover {
     position: relative;
     animation-name: fall;
     animation-duration: 2s;
-    animation-iteration-count: once;
+    animation-iteration-count: 1;
 }
 
 @keyframes fall {

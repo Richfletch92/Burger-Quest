@@ -1,6 +1,6 @@
-# Project Title | Your Name
+# Burger Quest | Burgernauts
 
-## Code Institute - Solo Project 1
+## Code Institute - Hackathon 1
 
 ![Site example on multiple devices.](assets/images/readme-images/responsive.png)
 
@@ -73,27 +73,15 @@ Provide a brief description of your project, its purpose, and its goals.
 - **Navbar**: Describe the navbar features.
 - **Footer**: Describe the footer features.
 
-## Pages
+## Furture Features
 
-### Home Page
-
-- **Feature 1**: Describe the feature.
-- **Feature 2**: Describe the feature.
-
-### Resources Page
-
-- **Feature 1**: Describe the feature.
-- **Feature 2**: Describe the feature.
-
-### About Us Page
-
-- **Feature 1**: Describe the feature.
-- **Feature 2**: Describe the feature.
-
-### Contact Us Page
-
-- **Feature 1**: Describe the feature.
-- **Feature 2**: Describe the feature.
+- Different image designs depending on level difficulty 
+- Count down timer which changes length depending on difficulty 
+- Animation for balloons popping
+- Background images for better perception 
+- Multiplayer Mode: Add a mode where players compete or collaborate.
+- Additional Levels: Include more difficulty levels or themed word lists.
+- Leaderboard: Save and display high scores.
 
 ## AI Overview
 
@@ -108,11 +96,10 @@ Describe how AI was used in your project.
 
 - **HTML5**: For structuring the content.
 - **CSS3**: For styling the website.
-- **Bootstrap 5**: For responsive design and components.
 - **JavaScript**: For interactive elements and form validation.
-- **FontAwesome**: For icons.
+- **Google Fonts**: For font styles.
 - **Co-Pilot**: For code generation and debugging.
-- **Chat-GPT**: For information generation.
+- **Chat-GPT**: For Q & A and code generation.
 
 ## Image Sources
 
