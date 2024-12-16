@@ -42,18 +42,22 @@
           </button>
           <button class="difficulty-button" data-level="genius">Genius</button>
         </div>
+        <!--Congratulations pop-up message  -->
+        <div id="win-popup" class="popup hidden">Congratulations! You won!</div>
+        <div id="lost-popup" class="popup hidden">Game Over! You ran out of attempts!</div>
         <!-- Game Display -->
         <div class="word-display" id="word-display"></div>
         <div class="attempts">Attempts: <span id="attempts">9</span></div>
         <div class="wrong-guesses" id="wrong-guesses"></div>
+        <div class="hinBtn">
+          <button id="get-hint">Get Hint</button>
+        </div>
         <div class="keyboard" id="keyboard"></div>
         <div class="hidden" id="text-entry">
-          <input maxlength="1" id="text-entry-guess" type="text" /><button
-            id="submit-button"
-          >
-            Submit
-          </button>
+          <input maxlength="1" id="text-entry-guess" type="text" />
+          <button id="submit-button">Submit</button>
         </div>
+
         <!-- Score Game Section -->
         <div id="scoreboard">
           <span id="win-count">Wins: 0</span>
