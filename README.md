@@ -159,18 +159,21 @@ Describe how AI was used in your project.
 
 ## Wireframes
 
-### Home Wireframe
+### Initial Ideas Wireframes
 
-![Home page wireframe](assets/images/readme-images/wireframe-home.png)
+![Initial Concept](assets/images/readme/hangman01.png)
+![Second Concept](assets/images/readme/hangman02.png)
+![Team Favourite Concept](assets/images/readme/hangman03.png)
 
-### About Us Wireframe
+### Gameplay Wireframes
 
-![About Us page wireframe](assets/images/readme-images/wireframe-about.png)
+![Gameplay Concept 01](assets/images/readme/hangmanplay1.png)
+![Gameplay Concept 02](assets/images/readme/hangmanplay2.png)
+![Gameplay Concept 03](assets/images/readme/hangmanplay3.png)
+![Gameplay Concept 04](assets/images/readme/hangmanplay4.png)
+![Gameplay Concept 05](assets/images/readme/hangmanplay5.png)
 
-### Contact Us Wireframe
+### Mobile Layout Wireframe
 
-![Contact Us page wireframe](assets/images/readme-images/wireframe-contact.png)
+![Mobile wireframe](assets/images/readme/mobilegamewireframe.png)
 
-### Resources Wireframe
-
-![Resources page wireframe](assets/images/readme-images/wireframe-resources.png)
