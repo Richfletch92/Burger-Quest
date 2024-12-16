@@ -412,7 +412,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (consecutiveWrong >= 2) {
             showHintButton(); // Show the hint button after 3 consecutive wrong guesses
-          }
+        }
+        const textEntry = document.getElementById('text-entry-guess');
+        textEntry.focus();
+        textEntry.value = '';
     }
 
     /**
