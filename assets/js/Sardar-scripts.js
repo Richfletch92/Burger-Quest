@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let wrongGuesses = [];
   let wins = 0;
   let losses = 0;
+  let consecutiveWrong = 0;
 
   //Event Listeners
   resetButton.addEventListener("click", startGame);
@@ -85,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function getRandomWord(level) {
     const words = wordList[level];
     const randomIndex = Math.floor(Math.random() * words.length);
+    console.log(words[randomIndex].toLowerCase());
     return words[randomIndex].toLowerCase();
   }
 
@@ -121,6 +123,18 @@ document.addEventListener("DOMContentLoaded", function () {
       keyboard.appendChild(button);
     });
   }
+  function disabledDisplayKeyboard() {
+    const keyboard = document.getElementById("keyboard");
+    keyboard.innerHTML = ""; // Clear the keyboard
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+    alphabet.forEach((letter) => {
+      const button = document.createElement("button");
+      button.textContent = letter.toLocaleUpperCase();
+      button.classList.add("letter-button");
+      button.disabled = true;
+      keyboard.appendChild(button);
+    });
+  }
 
   /**
    * Checks the letter pressed on the keyboard against the word generated
@@ -135,12 +149,16 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       wrongGuesses.push(letter);
       attempts--;
+      consecutiveWrong++;
       document.getElementById("attempts").textContent = `Attempts: ${attempts}`;
       document.getElementById(
         "wrong-guesses"
       ).textContent = `Wrong guesses: ${wrongGuesses.join(", ")}`;
       updateCatImage(attempts); // Update cat image
       displayWord();
+      if (consecutiveWrong >= 2) {
+        showHintButton(); // Show the hint button after 3 consecutive wrong guesses
+      }
     }
   }
 
@@ -196,7 +214,16 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleWin() {
     wins++;
     document.getElementById("win-count").textContent = `Wins: ${wins}`;
-    alert("Congratulations! You won!");
+
+    const popup = document.getElementById("win-popup");
+    popup.classList.remove("hidden");
+    popup.classList.add("show");
+
+    setTimeout(() => {
+      popup.classList.remove("show");
+      popup.classList.add("hidden");
+    }, 3000); // Hide the popup after 3 seconds
+    disabledDisplayKeyboard();
   }
   /**
    * Handles the loss function
@@ -204,6 +231,42 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleLoss() {
     losses++;
     document.getElementById("loss-count").textContent = `Looses: ${losses}`;
-    alert("Game Over! You ran out of attempts!");
+    const popup = document.getElementById("lost-popup");
+    popup.classList.remove("hidden");
+    popup.classList.add("show");
+    popup.style.backgroundColor = "red";
+
+    setTimeout(() => {
+      popup.classList.remove("show");
+      popup.classList.add("hidden");
+    }, 3000); // Hide the popup after 3 seconds
+    disabledDisplayKeyboard();
+  }
+
+  function showHintButton() {
+    getHintButton = document.getElementById("get-hint");
+    getHintButton.style.display = "inline";
+    getHintButton.addEventListener("click", getHint);
+  }
+  function getHint() {
+    getHintButton = document.getElementById("get-hint");
+    const displayWords = document.querySelectorAll("#word-display span");
+    const hiddenLetters = word
+      .split("")
+      .filter((letter) => !guessedLetters.includes(letter));
+    for (let displayWord of displayWords) {
+      if (displayWord.textContent === "_") {
+        displayWord.textContent = hiddenLetters[0];
+        guessedLetters.push(hiddenLetters[0]);
+        hiddenLetters.shift();
+        consecutiveWrong = 0;
+        getHintButton.style.display = "none";
+        if (hiddenLetters.length === 0) {
+          consecutiveWrong = 0;
+          handleWin();
+        }
+        break;
+      }
+    }
   }
 });

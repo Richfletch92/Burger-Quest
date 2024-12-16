@@ -243,6 +243,47 @@ nav ul li a:hover {
   font-size: 1.2em;
   font-weight: bold;
 }
+.hinBtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#get-hint {
+  background-color: #03a9f4;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+  display: none;
+}
+/* animate the pop-up message style */
+.popup {
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
 
 /* Media Queries */
 @media (min-width: 768px) {
