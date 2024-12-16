@@ -10,6 +10,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <title>Burger Quest!</title>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/Sardar-styles.css" />
   </head>
   <body>
@@ -22,60 +23,78 @@
         <li><a href="Sardar-Index.html">Sardar's Page</a></li>
       </ul>
     </nav>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Burger Quest!</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Jo-Index.html">Jo's Page</a></li>
+            <li><a href="Mo-Index.html">Mo's Page</a></li>
+            <li><a href="Rich-Index.html">Rich's Page</a></li>
+            <li><a href="Sardar-Index.html">Sardar's Page</a></li>
+        </ul>
+    </nav>
     <main id="main-container">
-      <section id="animation-container">
-        <div id="burger" class="float">
-          <img
-            src="assets/images/burgerGraphic1.png"
-            alt="A burger hangs from a balloon. Help the cat reach it!"
-          />
-        </div>
-        <div id="balloons" class="float raised">
-          <img
-            id="cat"
-            src="assets/images/balloonsGraphic10.png"
-            alt="A cat holding balloons. You have ten guesses left."
-          />
-        </div>
-      </section>
-      <section class="game-container">
-        <h1>Burger Quest</h1>
-        <!-- Difficulty Selection Buttons -->
-        <div id="difficulty-buttons">
-          <button class="difficulty-button" data-level="easy">Easy</button>
-          <button class="difficulty-button" data-level="intermediate">
-            Intermediate
-          </button>
-          <button class="difficulty-button" data-level="genius">Genius</button>
-        </div>
-        <!--Congratulations pop-up message  -->
-        <div id="win-popup" class="popup hidden">Congratulations! You won!</div>
-        <div id="lost-popup" class="popup hidden">Game Over! You ran out of attempts!</div>
-        <!-- Game Display -->
-        <div class="word-display" id="word-display"></div>
-        <div class="attempts">Attempts: <span id="attempts">9</span></div>
-        <div class="wrong-guesses" id="wrong-guesses"></div>
-        <div class="hinBtn">
-          <button id="get-hint">Reveal Letter</button>
-        </div>
-        <div class="keyboard" id="keyboard"></div>
-        <div class="hidden" id="text-entry">
-          <input maxlength="1" id="text-entry-guess" type="text" />
-          <button id="submit-button">Submit</button>
-        </div>
-
-        <!-- Score Game Section -->
-        <div id="scoreboard">
-          <span id="win-count">Wins: 0</span>
-          <span id="loss-count">Losses: 0</span>
-        </div>
-
-        <!-- Start Game Button -->
-        <button id="reset-button" class="reset-button hidden">
-          Reset Game
-        </button>
-      </section>
+        <section id="animation-container">
+            <div id="burger" class="float">
+                <img src="assets/images/burgerGraphic1.png" alt="A burger hangs from a balloon. Help the cat reach it!">
+            </div>
+            <div id="balloons" class="float raised">
+                <img id="cat" src="assets/images/balloonsGraphic10.png"
+                    alt="A cat holding balloons. You have ten guesses left.">
+            </div>
+        </section>
+        <section class="game-container">
+            <h1>Burger Quest</h1>
+            <!-- Difficulty Selection Buttons -->
+            <div id="difficulty-buttons">
+                <button class="difficulty-button" data-level="easy">Easy</button>
+                <button class="difficulty-button" data-level="medium">Medium</button>
+                <button class="difficulty-button" data-level="hard">Hard</button>
+            </div>
+            <!--Congratulations pop-up message  -->
+            <div id="win-popup" class="popup hidden">Congratulations! You won!</div>
+            <div id="lost-popup" class="popup hidden">Game Over! You ran out of attempts!</div>
+            <!-- Game Display -->
+            <div class="word-display" id="word-display"></div>
+            <div class="attempts">Attempts: <span id="attempts"></span></div>
+            <div class="wrong-guesses" id="wrong-guesses"></div>
+            <div class="hints hidden" id="hint-display"></div>
+            <div class="hinBtn">
+                <button id="get-hint">Reveal Letter</button>
+            </div>
+            <div class="keyboard" id="keyboard"></div>
+            <div class="hidden" id="text-entry"><input maxlength="1" id="text-entry-guess" type="text"><button
+                    id="submit-button">Submit</button></div>
+            <!-- Start Game Button -->
+            <button id="hint-button" class="hint-button hidden">Show Hint</button>
+            <button id="reset-button" class="reset-button hidden">Reset Game</button>
+            <div id="scoreboard">
+                <span id="win-count">Wins: 0</span>
+                <span id="loss-count">Losses: 0</span>
+            </div>
+        </section>
     </main>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
     <script src="assets/js/Sardar-scripts.js"></script>
   </body>
 </html>

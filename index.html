@@ -25,6 +25,33 @@
             <li><a href="Sardar-Index.html">Sardar's Page</a></li>
         </ul>
     </nav>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Burger Quest!</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Jo-Index.html">Jo's Page</a></li>
+            <li><a href="Mo-Index.html">Mo's Page</a></li>
+            <li><a href="Rich-Index.html">Rich's Page</a></li>
+            <li><a href="Sardar-Index.html">Sardar's Page</a></li>
+        </ul>
+    </nav>
     <main id="main-container">
         <section id="animation-container">
             <div id="burger" class="float">
@@ -43,6 +70,9 @@
                 <button class="difficulty-button" data-level="medium">Medium</button>
                 <button class="difficulty-button" data-level="hard">Hard</button>
             </div>
+            <!--Congratulations pop-up message  -->
+            <div id="win-popup" class="popup hidden">Congratulations! You won!</div>
+            <div id="lost-popup" class="popup hidden">Game Over! You ran out of attempts!</div>
             <!-- Game Display -->
             <div class="word-display" id="word-display"></div>
             <div class="attempts">Attempts: <span id="attempts"></span></div>
@@ -63,6 +93,10 @@
             </div>
         </section>
     </main>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
     <script src="assets/js/scripts.js"></script>
 </body>
 
