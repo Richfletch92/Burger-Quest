@@ -3,7 +3,7 @@
 
 :root {
     --title-font: 'UnifrakturMaguntia', cursive;
-    --title-colour: #fca644;
+    --title-colour: #f79f3b;
     --body-font: 'Nunito', sans-serif;
     --main-background: #B1F0F7;
     --game-background: #F5F0CD;
@@ -47,6 +47,7 @@ h1 {
     font-size: 3em;
     margin-bottom: 20px;
     color: var(--title-colour);
+    text-shadow: 3px 3px 3px #ababab;
 }
 
 /* Navigation Styles */
