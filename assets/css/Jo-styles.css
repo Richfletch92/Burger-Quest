@@ -3,7 +3,7 @@
 
 :root {
     --title-font: 'UnifrakturMaguntia', cursive;
-    --title-colour: #f79f3b;
+    --title-colour: #fca644;
     --body-font: 'Nunito', sans-serif;
     --main-background: #B1F0F7;
     --game-background: #F5F0CD;
@@ -222,6 +222,23 @@ nav ul li a:hover {
     width: 40px;
 }
 
+#submit-button {
+    background-color: var(--button-colour);
+    color: var(--button-text);
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+#submit-button:hover {
+    background-color: var(--button-hover);
+    color: var(--button-text-hover);
+}
+
 .letter-button:hover {
     background-color: var(--keyboard-hover);
     color: var(--button-text-hover);
@@ -275,6 +292,53 @@ nav ul li a:hover {
     background-color: var(--button-hover);
     color: var(--button-text-hover);
 }
+
+/* Score board style */
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .hinBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #get-hint {
+    background-color: #03a9f4;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+    display: none;
+  }
+  /* animate the pop-up message style */
+  .popup {
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .popup.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
 
 
