@@ -4,9 +4,9 @@
 
 ![Site example on multiple devices.](assets/images/readme-images/responsive.png)
 
-[Click Here to view the Live Project.](https://your-live-project-link.com)
+[Click Here to view the Live Project.](https://richfletch92.github.io/Burger-Quest/)
 
-[Click here to view the Repository.](https://github.com/your-github-username/your-repository-name)
+[Click here to view the Repository.](https://github.com/Richfletch92/Burger-Quest)
 
 ## Table of Contents
 
@@ -14,11 +14,6 @@
 - [User Value Explanations](#user-value-explanations)
 - [Design](#design)
 - [Features](#general-features)
-- [Pages](#pages)
-    - [Home Page](#home-page)
-    - [Resources Page](#resources-page)
-    - [About Us Page](#about-us-page)
-    - [Contact Us Page](#contact-us-page)
 - [AI Overview](#ai-overview)
 - [Things to be Improved](#things-to-be-improved)
 - [Technologies Used](#technologies-used)
@@ -43,35 +38,57 @@ Provide a brief description of your project, its purpose, and its goals.
 
 ## User Value Explanations
 
-### Feature 1
+## Installation
+- Clone or download the repository.
+- Open the index.html file in your browser.
+### Dependencies
+The game does not require external libraries. All styles and scripts are included in the project.
 
-- **Value**: Describe the value to the user.
-- **Explanation**: Explain how this feature benefits the user.
-
-### Feature 2
-
-- **Value**: Describe the value to the user.
-- **Explanation**: Explain how this feature benefits the user.
+## How to Play
+1. Open the game in your browser.
+2. Select a difficulty level (Easy, Medium, or Hard).
+3. Guess letters by either:
+    - Clicking buttons on the on-screen keyboard.
+    - Typing a letter in the text box and clicking "Submit."
+4. The game provides feedback:
+    - Correct guesses reveal the letter(s) in the word.
+    - Incorrect guesses decrease your remaining attempts.
+5. Win by guessing the word before running out of attempts.
+6. Lose if attempts reach zero without guessing the word.
 
 ## Design
 
 - **Colours**: List the colours used in your project.
-    - Colour 1: #hexcode
-    - Colour 2: #hexcode
+    - Main Background: #B1F0F7
+    - Game Background: #F5F0CD
+    - Title Colour: #fca644
+    - Text Colour: #333
+    - Button Colour: #37bdf7
+    - Button Hover: #B1F0F7
+    - Button Text: #FFF8DE
+    - Button Text Hover: #727272
+    - Reset Colour: #fca644
+    - Reset Hover: #ffcd94
+    - Keyboard Colour: #37bdf7
+    - Keyboard Hover: #B1F0F7
 
 - **Fonts**: List the fonts used in your project.
-    - Main font: [Font Name](font-link)
-    - Header font: [Font Name](font-link)
+    - Main font: [Nunito](https://fonts.google.com/specimen/Nunito)
+    - Header font: [UnifrakturMaguntia](https://fonts.google.com/specimen/UnifrakturMaguntia)
 
-- **Images**: Describe the sources of your images.
-    - Source 1: [Source Name](source-link)
-    - Source 2: [Source Name](source-link)
+- **Images**: 
+    All images were designed and created by Jo. The designs are aimed towards kids to provide a fun and interactive experience. 
 
 ## General Features
 
-- **Responsive Design**: Describe the responsive design features.
-- **Navbar**: Describe the navbar features.
-- **Footer**: Describe the footer features.
+- Difficulty Levels: Easy, Medium, and Hard with varying word complexity and attempts.
+- Interactive Keyboard: Clickable on-screen keyboard to make guesses.
+- Text Entry: Option to type guesses via a text box.
+- Animations: Floating burger and cat animations to enhance gameplay.
+- Hint Feature: Reveal a letter to assist with challenging words.
+- Score Tracking: Tracks wins and losses.
+- Reset Option: Restart the game at any time.
+- Responsive Design: Optimized for various screen sizes.
 
 ## Furture Features
 
@@ -96,10 +113,11 @@ Describe how AI was used in your project.
 
 - **HTML5**: For structuring the content.
 - **CSS3**: For styling the website.
-- **JavaScript**: For interactive elements and form validation.
+- **JavaScript**: For Game logic and interactivity.
 - **Google Fonts**: For font styles.
 - **Co-Pilot**: For code generation and debugging.
 - **Chat-GPT**: For Q & A and code generation.
+- **favicon.io**: For creation of favicons.
 
 ## Image Sources
 
