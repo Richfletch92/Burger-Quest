@@ -24,6 +24,7 @@
 - [Design](#design)
 - [General Features](#general-features)
 - [Future Features](#future-features)
+- [JavaScript Functions](#javascript-functions)
 - [AI Overview](#ai-overview)
 - [Things to be Improved](#things-to-be-improved)
 - [Technologies Used](#technologies-used)
@@ -31,10 +32,11 @@
     - [HTML](#html)
     - [CSS](#css)
     - [JavaScript](#javascript)
+- [Wireframes](#wireframes)
 - [Lighthouse Performance](#lighthouse-performance)
     - [Mobile](#mobile)
     - [Desktop](#desktop)
-- [Wireframes](#wireframes)
+- [Credits](#credits)
 
 ## About
 Burger Quest is an interactive and engaging word-guessing game designed for players of all ages. The primary goal of the game is to guess the hidden word by selecting letters within a limited number of attempts. The game offers various difficulty levels to cater to different skill sets, making it both challenging and entertaining. The project was developed as part of a hackathon organized by Code Institute, with a focus on creating a fun and educational experience that helps improve vocabulary and spelling skills. The design is kid-friendly, featuring vibrant colors and playful animations to enhance the user experience.
@@ -107,6 +109,24 @@ The game does not require external libraries. All styles and scripts are include
 - Additional Levels: Include more difficulty levels or themed word lists.
 - Leaderboard: Save and display high scores.
 
+## JavaScript Functions
+
+- **startGame**: Initializes the game by setting the difficulty, selecting a random word, and resetting game variables.
+- **setDifficulty**: Sets the number of attempts based on the selected difficulty level.
+- **getRandomWord**: Returns a random word from the word list based on the selected difficulty level.
+- **displayWord**: Displays the current state of the word with guessed letters revealed and remaining letters hidden.
+- **displayKeyboard**: Displays the on-screen keyboard for letter selection.
+- **handleGuess**: Handles the player's guess from the on-screen keyboard.
+- **handleGuessText**: Handles the player's guess from the text box.
+- **checkGameStatus**: Checks if the player has won or lost the game.
+- **updateCatImage**: Updates the cat image based on the number of remaining attempts.
+- **toggleHint**: Toggles the display of the hint.
+- **showHintButton**: Displays the hint button after consecutive wrong guesses.
+- **getHint**: Provides a free letter hint to the player.
+- **handleWin**: Handles the win scenario by updating the win count and displaying a popup message.
+- **handleLoss**: Handles the loss scenario by updating the loss count and displaying a popup message.
+- **disabledDisplayKeyboard**: Disables the on-screen keyboard after the game ends.
+
 ## AI Overview
 
 - Ai was used to generate the words for the game and hints. 
@@ -127,15 +147,15 @@ The game does not require external libraries. All styles and scripts are include
 
 ### HTML
 
-![Validation Image](assets/images/readme-images/validation-image.png)
+![Validation Image](https://i.gyazo.com/96f0bd10e3775433ac5cf0fc7fa2bd4b.png)
 
 ### CSS
 
-![CSS Validation](assets/images/readme-images/css-validation.png)
+![CSS Validation](https://i.gyazo.com/1b4b2aa49a8647ca676fc80546757d8f.png)
 
 ### JavaScript
 
-![JavaScript Validation]()
+![JavaScript Validation](https://i.gyazo.com/d78e846922026b2d12c688b2417070de.png)
 
 ## Wireframes
 
@@ -167,3 +187,6 @@ The game does not require external libraries. All styles and scripts are include
 
 ![Desktop Lighthouse Performance](assets/images/readme/lighthouse_desktop.png)
 
+## Credits
+
+- Balloon pop sound [Link](https://pixabay.com/sound-effects/balloon-pop-93436/)
