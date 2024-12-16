@@ -488,24 +488,29 @@ document.addEventListener('DOMContentLoaded', function () {
         getHintButton.addEventListener("click", getHint);
     }
 
-  function getHint() {
-      getHintButton = document.getElementById("get-hint");
-      const displayWords = document.querySelectorAll("#word-display span");
-      const hiddenLetters = word
-          .split("")
-          .filter((letter) => !guessedLetters.includes(letter));
-      for (let displayWord of displayWords) {
-          if (displayWord.textContent === "_") {
-              displayWord.textContent = hiddenLetters[0];
-              guessedLetters.push(hiddenLetters[0]);
-              hiddenLetters.shift();
-              consecutiveWrong = 0;
-              getHintButton.style.display = "none";
-              if (hiddenLetters.length === 0) {
-                  consecutiveWrong = 0;
-                  handleWin();
-              }
-              break;
-          }
-      }
-  }
+
+    /**
+     * Gives the player a free letter hint
+     */
+    function getHint() {
+        getHintButton = document.getElementById("get-hint");
+        const displayWords = document.querySelectorAll("#word-display span");
+        const hiddenLetters = word
+            .split("")
+            .filter((letter) => !guessedLetters.includes(letter));
+        for (let displayWord of displayWords) {
+            if (displayWord.textContent === "_") {
+                displayWord.textContent = hiddenLetters[0];
+                guessedLetters.push(hiddenLetters[0]);
+                hiddenLetters.shift();
+                consecutiveWrong = 0;
+                getHintButton.style.display = "none";
+                if (hiddenLetters.length === 0) {
+                    consecutiveWrong = 0;
+                    handleWin();
+                }
+                break;
+            }
+        }
+    }
+});
