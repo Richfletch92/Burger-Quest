@@ -388,7 +388,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-
     /**
      * Handles the player's guess from text box
      */
@@ -410,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (consecutiveWrong >= 2) {
             showHintButton(); // Show the hint button after 3 consecutive wrong guesses
-        }
+          }
     }
 
     /**
@@ -435,7 +434,6 @@ document.addEventListener('DOMContentLoaded', function () {
         catImage.src = `assets/images/balloonsGraphic${attempts}.png`;
         catImage.alt = `A cat holding balloons. You have ${attempts} guesses left.`;
     }
-
 
     /**
      * Toggles the hint display
@@ -487,7 +485,6 @@ document.addEventListener('DOMContentLoaded', function () {
         getHintButton.style.display = "inline";
         getHintButton.addEventListener("click", getHint);
     }
-
 
     /**
      * Gives the player a free letter hint
