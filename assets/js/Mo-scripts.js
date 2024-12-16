@@ -287,6 +287,9 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
     }
 
+    /*
+     * Starts the game
+     */
     function startGame() {
         setDifficulty(selectedLevel);
         guessedLetters = [];
@@ -307,12 +310,18 @@ document.addEventListener('DOMContentLoaded', function () {
         balloons.classList.add("float");
     }
 
+    /**
+     * Returns a random word from the word list
+     */
     function getRandomWord(level) {
         const words = wordList[level];
         const randomIndex = Math.floor(Math.random() * words.length);
         return words[randomIndex];
     }
 
+    /**
+     * Displays the word on the screen
+     */
     function displayWord() {
         const wordDisplay = document.getElementById('word-display');
         wordDisplay.innerHTML = ''; // Clear the word display
@@ -324,6 +333,9 @@ document.addEventListener('DOMContentLoaded', function () {
         checkGameStatus();
     }
 
+    /**
+     * Displays the keyboard on the screen
+     */
     function displayKeyboard() {
         const keyboard = document.getElementById('keyboard');
         keyboard.innerHTML = ''; // Clear the keyboard
@@ -337,6 +349,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    /**
+     * Disables the keyboard
+     */
+    function disabledDisplayKeyboard() {
+        const keyboard = document.getElementById("keyboard");
+        keyboard.innerHTML = ""; // Clear the keyboard
+        const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+        alphabet.forEach((letter) => {
+            const button = document.createElement("button");
+            button.textContent = letter.toLocaleUpperCase();
+            button.classList.add("letter-button");
+            button.disabled = true;
+            keyboard.appendChild(button);
+        });
+    }
+
+    /**
+     * Handles the player's guess from keyboard
+     */
     function handleGuess(letter) {
         if (guessedLetters.includes(letter) || wrongGuesses.includes(letter)) return;
         guessedLetters.push(letter);
@@ -357,6 +388,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    /**
+     * Handles the player's guess from text box
+     */
     function handleGuessText() {
         const letter = document.getElementById('text-entry-guess').value.toLowerCase();
         if (guessedLetters.includes(letter) || wrongGuesses.includes(letter)) return;
@@ -378,11 +412,13 @@ document.addEventListener('DOMContentLoaded', function () {
           }
     }
 
+    /**
+     * Checks the game status
+     */
     function checkGameStatus() {
         if (word.split('').every(letter => guessedLetters.includes(letter))) {
             handleWin();
         } else if (attempts <= 0) {
-            alert('Game Over! You ran out of attempts!');
             const balloons = document.getElementById('balloons');
             balloons.classList.remove("float");
             balloons.classList.add("fall");
@@ -390,12 +426,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    /**
+     * Updates the cat image
+     */
     function updateCatImage(attempts) {
         const catImage = document.getElementById('cat');
         catImage.src = `assets/images/balloonsGraphic${attempts}.png`;
         catImage.alt = `A cat holding balloons. You have ${attempts} guesses left.`;
     }
 
+    /**
+     * Toggles the hint display
+     */
     function toggleHint() {
         hintDisplay.classList.toggle('hidden');
     }
@@ -406,7 +448,15 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleWin() {
         wins++;
         document.getElementById("win-count").textContent = `Wins: ${wins}`;
-        alert("Congratulations! You won!");
+        const popup = document.getElementById("win-popup");
+        popup.classList.remove("hidden");
+        popup.classList.add("show");
+
+        setTimeout(() => {
+            popup.classList.remove("show");
+            popup.classList.add("hidden");
+        }, 3000); // Hide the popup after 3 seconds
+        disabledDisplayKeyboard();
     }
 
     /**
@@ -415,7 +465,16 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleLoss() {
         losses++;
         document.getElementById("loss-count").textContent = `Looses: ${losses}`;
-        alert("Game Over! You ran out of attempts!");
+        const popup = document.getElementById("lost-popup");
+        popup.classList.remove("hidden");
+        popup.classList.add("show");
+        popup.style.backgroundColor = "red";
+
+        setTimeout(() => {
+            popup.classList.remove("show");
+            popup.classList.add("hidden");
+        }, 3000); // Hide the popup after 3 seconds
+        disabledDisplayKeyboard();
     }
 
     /**
@@ -427,6 +486,9 @@ document.addEventListener('DOMContentLoaded', function () {
         getHintButton.addEventListener("click", getHint);
     }
 
+    /**
+     * Gives the player a free letter hint
+     */
     function getHint() {
         getHintButton = document.getElementById("get-hint");
         const displayWords = document.querySelectorAll("#word-display span");
