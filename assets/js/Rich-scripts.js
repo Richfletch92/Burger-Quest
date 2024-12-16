@@ -308,6 +308,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const balloons = document.getElementById('balloons');
         balloons.classList.remove("fall");
         balloons.classList.add("float");
+        consecutiveWrong = 0;
+        getHintButton.style.display = "none";
     }
 
     /**
