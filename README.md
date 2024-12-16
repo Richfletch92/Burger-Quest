@@ -137,6 +137,25 @@ The game does not require external libraries. All styles and scripts are include
 
 ![JavaScript Validation]()
 
+## Wireframes
+
+### Initial Ideas Wireframes
+
+![Initial Concept](assets/images/readme/hangman01.png)
+![Second Concept](assets/images/readme/hangman02.png)
+![Team Favourite Concept](assets/images/readme/hangman03.png)
+
+### Gameplay Wireframes
+
+![Gameplay Concept 01](assets/images/readme/hangmanplay1.png)
+![Gameplay Concept 02](assets/images/readme/hangmanplay2.png)
+![Gameplay Concept 03](assets/images/readme/hangmanplay3.png)
+![Gameplay Concept 04](assets/images/readme/hangmanplay4.png)
+![Gameplay Concept 05](assets/images/readme/hangmanplay5.png)
+
+### Mobile Layout Wireframe
+
+![Mobile wireframe](assets/images/readme/mobilegamewireframe.png)
 
 ## Lighthouse Performance
 
@@ -147,6 +166,4 @@ The game does not require external libraries. All styles and scripts are include
 ### Desktop
 
 ![Desktop Lighthouse Performance](assets/images/readme/lighthouse_desktop.png)
-
-## Wireframes/Initial Designs
 
